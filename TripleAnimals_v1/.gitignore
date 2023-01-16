@@ -9,6 +9,11 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/Assets/2D Cute Wild Animal Pack V.1/
+/Assets/Game/Image/
+/Assets/Plugins
+/Assets/UserSettings
+
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
