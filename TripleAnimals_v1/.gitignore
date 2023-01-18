@@ -15,7 +15,8 @@
 /Assets/UserSettings
 /Assets/Rounded Blocks
 /Assets/Free 2D Cartoon Parallax Background
-
+/Assets/Game/Card
+/Assets/Game/Animation
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
