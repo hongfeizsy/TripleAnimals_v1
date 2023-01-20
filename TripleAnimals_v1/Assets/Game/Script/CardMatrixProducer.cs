@@ -27,7 +27,7 @@ public class CardMatrixProducer : MonoBehaviour
         maxlayer = 100;
         row = 5;
         column = 3;
-        float shiftInZAxis = 0.01f;
+        float shiftInZAxis = 1f;
         System.Random rnd = new System.Random(123);
         ProduceRandCardArrangement();
         int idx = 0;
@@ -78,7 +78,7 @@ public class CardMatrixProducer : MonoBehaviour
         System.Random rnd = new System.Random(100);
         for (int i = 0; i < numberOfType; i++)
         {
-            numberOfPairs.Add(rnd.Next(2, 4));
+            numberOfPairs.Add(rnd.Next(1, 3));
             cardArrangement.AddRange(Enumerable.Repeat(i, 3 * numberOfPairs[i]).ToList());
         }
         

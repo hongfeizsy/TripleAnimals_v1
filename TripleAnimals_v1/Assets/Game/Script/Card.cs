@@ -171,10 +171,10 @@ public class Card : MonoBehaviour
         set {
             isTouchable = value;
             GetComponent<BoxCollider2D>().enabled = value;
-            float alpha = 0.7f;
-            if (value) { alpha = 1; }
-            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, alpha);
-            transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, alpha);
+            if (value)
+            {
+                transform.GetChild(1).gameObject.SetActive(false);
+            }
         }
     }
 
