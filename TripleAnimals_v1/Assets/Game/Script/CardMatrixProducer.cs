@@ -25,8 +25,8 @@ public class CardMatrixProducer : MonoBehaviour
         float cardScalingFactor = CardPrefabs[0].gameObject.transform.localScale[0];
         
         maxlayer = 100;
-        row = 5;
-        column = 3;
+        row = 7;
+        column = 5;
         float shiftInZAxis = 1f;
         System.Random rnd = new System.Random(123);
         ProduceRandCardArrangement();
