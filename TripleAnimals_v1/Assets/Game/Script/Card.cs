@@ -32,9 +32,10 @@ public class Card : MonoBehaviour
     private void OnMouseDown()
     {
         if (!cardBox.GameContinue) { return; }
-        if (isInBox) { return; }     // Can't be isTouchable, as the renderer can't be blur.
+        if (isInBox) { return; }
 
         isInBox = true;
+        transform.GetChild(0).gameObject.GetComponent<Animator>().SetTrigger("Eat");
         int spotNumberToMove = FindSpotNumber();
         transform.parent = null;
         // spawner.EnableCardInQueue();
@@ -174,6 +175,7 @@ public class Card : MonoBehaviour
             if (value)
             {
                 transform.GetChild(1).gameObject.SetActive(false);
+                transform.GetChild(0).gameObject.GetComponent<Animator>().SetTrigger("WakeUp");
             }
         }
     }
