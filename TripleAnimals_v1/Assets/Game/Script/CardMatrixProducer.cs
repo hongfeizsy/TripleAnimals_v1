@@ -46,7 +46,7 @@ public class CardMatrixProducer : MonoBehaviour
                         cardTypeIndex = randCardArrangement[cardTypeCount];
                         var cardObject = Instantiate(CardPrefabs[cardTypeIndex], 
                             new Vector3(coordinate.x * (cardWidth / 2) * cardScalingFactor, coordinate.y * (cardHeight / 2) * cardScalingFactor, 
-                                - shiftInZAxis * coordinate.z), Quaternion.identity, gameObject.transform);
+                                - (shiftInZAxis * coordinate.z + 1)), Quaternion.identity, gameObject.transform);
                         CoordidateList.Add(coordinate);
                         cardObject.Coordidate = coordinate;
                         cardObject.CardIndex = idx;
@@ -65,6 +65,7 @@ public class CardMatrixProducer : MonoBehaviour
             cardIndex = Enumerable.Range(0, CoordidateList.Count).ToList<int>();
             cardRelation = IdentifyCardRelation(maxlayer);
             SetCardTouchability();
+            FindObjectOfType<CardCountSlider>().InitialCardCount = randCardArrangement.Count;
             // print("How many layers finally? " + (myLayer + 1));
             // print("How many cards in total? " + randCardArrangement.Count);
         };

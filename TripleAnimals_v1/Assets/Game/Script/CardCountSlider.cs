@@ -10,11 +10,9 @@ public class CardCountSlider : MonoBehaviour
     GameObject handle;
     GameObject handleAnimalFigure;
 
-    void Start()
+    private void Start() 
     {
         slider = GetComponent<Slider>();   
-        initialCardCount = FindObjectsOfType<Card>().Length;
-        remainingCardCount = FindObjectsOfType<Card>().Length;
         handle = GameObject.Find("Handle");
         handleAnimalFigure = GameObject.Find("DeerHandle");
     }
@@ -24,5 +22,11 @@ public class CardCountSlider : MonoBehaviour
         remainingCardCount = FindObjectsOfType<Card>().Length;
         slider.value = 1 - (float)remainingCardCount / (float)initialCardCount;
         handleAnimalFigure.transform.position = handle.transform.position;
+    }
+
+    public int InitialCardCount
+    {
+        get { return initialCardCount; }
+        set { initialCardCount = value; }
     }
 }
