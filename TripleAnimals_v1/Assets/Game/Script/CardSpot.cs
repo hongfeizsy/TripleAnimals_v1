@@ -7,6 +7,9 @@ public class CardSpot : MonoBehaviour
     [SerializeField] int spotNumber;
     [SerializeField] CardType cardType;
     [SerializeField] Card cardInSpot;
+    [SerializeField] GameObject disappearanceVFX;
+    
+
     bool isOccupied = false;
 
     public int SpotNumber
@@ -36,5 +39,11 @@ public class CardSpot : MonoBehaviour
         Destroy(cardInSpot.gameObject);
         cardType = CardType.Null;
         cardInSpot = null;
+    }
+
+    public void PlayDisVFX()
+    {
+        GameObject vfx = Instantiate(disappearanceVFX, transform.position, transform.rotation);
+        Destroy(vfx, 0.7f);
     }
 }

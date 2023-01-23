@@ -52,6 +52,7 @@ MonoBehaviour:
   spotNumber: 5
   cardType: 0
   cardInSpot: {fileID: 0}
+  disappearanceVFX: {fileID: 7155380153926339209, guid: c996d196f496d444c83fadac43eccd0e, type: 3}
 --- !u!1 &7847676854034716721
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +105,7 @@ MonoBehaviour:
   spotNumber: 2
   cardType: 0
   cardInSpot: {fileID: 0}
+  disappearanceVFX: {fileID: 7155380153926339209, guid: c996d196f496d444c83fadac43eccd0e, type: 3}
 --- !u!1 &7847676854375063428
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,6 +158,7 @@ MonoBehaviour:
   spotNumber: 3
   cardType: 0
   cardInSpot: {fileID: 0}
+  disappearanceVFX: {fileID: 7155380153926339209, guid: c996d196f496d444c83fadac43eccd0e, type: 3}
 --- !u!1 &7847676854450617561
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +211,7 @@ MonoBehaviour:
   spotNumber: 1
   cardType: 0
   cardInSpot: {fileID: 0}
+  disappearanceVFX: {fileID: 7155380153926339209, guid: c996d196f496d444c83fadac43eccd0e, type: 3}
 --- !u!1 &7847676854613750466
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +361,7 @@ MonoBehaviour:
   spotNumber: 6
   cardType: 0
   cardInSpot: {fileID: 0}
+  disappearanceVFX: {fileID: 7155380153926339209, guid: c996d196f496d444c83fadac43eccd0e, type: 3}
 --- !u!1 &7847676855448860404
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +414,7 @@ MonoBehaviour:
   spotNumber: 0
   cardType: 0
   cardInSpot: {fileID: 0}
+  disappearanceVFX: {fileID: 7155380153926339209, guid: c996d196f496d444c83fadac43eccd0e, type: 3}
 --- !u!1 &7847676855466141552
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,3 +467,4 @@ MonoBehaviour:
   spotNumber: 4
   cardType: 0
   cardInSpot: {fileID: 0}
+  disappearanceVFX: {fileID: 7155380153926339209, guid: c996d196f496d444c83fadac43eccd0e, type: 3}

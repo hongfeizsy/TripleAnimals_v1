@@ -194,6 +194,7 @@ public class Card : MonoBehaviour
             if ((cardSpot.SpotNumber > spotNumber - 3) && (cardSpot.SpotNumber <= spotNumber))
             {
                 cardSpot.DestroyCardInSpot();
+                cardSpot.PlayDisVFX();
                 cardSpot.CardTypeInSpot = CardType.Null;
                 cardSpot.CardInSpot = null;
                 cardSpot.SpotOccupied = false;

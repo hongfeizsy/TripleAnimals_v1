@@ -18,6 +18,8 @@
 /Assets/Game/Card
 /Assets/Game/Animation
 /Assets/TextMesh Pro
+/Assets/Download
+/Assets/Game/Particle effect
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
