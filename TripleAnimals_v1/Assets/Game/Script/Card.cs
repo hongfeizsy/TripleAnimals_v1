@@ -7,7 +7,7 @@ using System.Linq;
 
 public enum CardType
 {
-    Null, Fox, Deer, Dear_cub, Bear_black, Bear_brown, Bear_white, Elephant, Wolf_brown, Wolf_grey, Monkey, Peacock, Panda, Turkey, Snake_mamba, Snake_cobra
+    Null, Fox, Deer, Dear_cub, Bear_black, Bear_brown, Bear_white, BearCub_brown, Elephant, Wolf_brown, Wolf_grey, Monkey, Peacock, Panda, Turkey, Snake_mamba, Snake_cobra
 }
 
 public class Card : MonoBehaviour
