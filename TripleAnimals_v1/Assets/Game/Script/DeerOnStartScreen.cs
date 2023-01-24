@@ -23,7 +23,7 @@ public class DeerOnStartScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (waitTime >= 2f) 
+        if (waitTime >= 1.5f) 
         {
             waitTime = 0;
             if (currentStatus == Status.Watch) 
