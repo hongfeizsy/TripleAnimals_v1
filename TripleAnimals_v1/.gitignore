@@ -20,6 +20,7 @@
 /Assets/TextMesh Pro
 /Assets/Download
 /Assets/Game/Particle effect
+/Assets/FPSFont
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
