@@ -8,18 +8,8 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] float timeToWait;
     int currentSceneIndex;
 
-    public void LoadNextScene()
-    {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex + 1);
-    }
-
     public void ExitGame() {
         Application.Quit();
-    }
-
-    public void LoadStartScreen() {
-        SceneManager.LoadScene("StartScreen");
     }
 
     public void WaitAndLoadNextScene()
@@ -32,6 +22,10 @@ public class SceneLoader : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToWait);
         SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void WaitAndLoadStartScene() {
+        StartCoroutine(DelayedLoadScene(0));
     }
 
 }

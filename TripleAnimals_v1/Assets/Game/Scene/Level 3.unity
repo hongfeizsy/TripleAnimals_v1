@@ -608,6 +608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328970238d2468041bff389a2b42d03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToWait: 0
 --- !u!4 &1552243470
 Transform:
   m_ObjectHideFlags: 0
@@ -703,6 +704,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 733771158}
     m_Modifications:
+    - target: {fileID: 390707537, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1552243469}
+    - target: {fileID: 390707537, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: WaitAndLoadStartScene
+      objectReference: {fileID: 0}
     - target: {fileID: 2001806065126910899, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
       propertyPath: m_Name
       value: Level lose canvas
