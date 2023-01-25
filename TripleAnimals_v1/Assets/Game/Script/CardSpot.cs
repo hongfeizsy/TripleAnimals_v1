@@ -44,6 +44,6 @@ public class CardSpot : MonoBehaviour
     public void PlayDisVFX()
     {
         GameObject vfx = Instantiate(disappearanceVFX, transform.position, transform.rotation);
-        Destroy(vfx, 0.7f);
+        Destroy(vfx, 0.5f);
     }
 }
