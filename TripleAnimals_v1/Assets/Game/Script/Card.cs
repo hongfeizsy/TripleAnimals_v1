@@ -189,6 +189,7 @@ public class Card : MonoBehaviour
 
     private void KillThreeTiles(int spotNumber)
     {
+        FindObjectOfType<CardBox>().PlayKillingSound();
         foreach (CardSpot cardSpot in cardSpots)
         {
             if ((cardSpot.SpotNumber > spotNumber - 3) && (cardSpot.SpotNumber <= spotNumber))

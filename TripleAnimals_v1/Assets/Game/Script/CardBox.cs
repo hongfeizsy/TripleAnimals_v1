@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 public class CardBox : MonoBehaviour
 {
     [SerializeField] GameObject loseMessage;
+    [SerializeField] UnityEvent killThreeTilesSound;
     CardSpot[] cardSpots;
     bool shouldMoveCardsToLeft;   // Should the remaining cards in the box move left?
     float timeElapsed = 0f;
@@ -106,5 +107,9 @@ public class CardBox : MonoBehaviour
     public bool GameContinue 
     {
         get { return gameContinue; }
+    }
+
+    public void PlayKillingSound() {
+        killThreeTilesSound.Invoke();
     }
 }
