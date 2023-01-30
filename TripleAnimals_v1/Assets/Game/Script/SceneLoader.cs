@@ -25,6 +25,6 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void WaitAndLoadStartScene() {
-        StartCoroutine(DelayedLoadScene(0));
+        StartCoroutine(DelayedLoadScene(1));
     }
 }

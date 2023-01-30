@@ -13,14 +13,14 @@ public class WolfOnLoadingScreen : MonoBehaviour
         sceneLoader = FindObjectOfType<SceneLoader>();
         waitTime = 0f;
         animator = GetComponentInChildren<Animator>();
+        FindObjectOfType<SceneLoader>().WaitAndLoadNextScene();
     }
 
     void Update()
     {
-        if (waitTime >= 3f) 
+        if (waitTime >= 1f) 
         { 
             animator.SetTrigger("Howl"); 
-            waitTime = 0f;
         }
         waitTime += Time.deltaTime;
     }

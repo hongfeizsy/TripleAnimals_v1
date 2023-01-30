@@ -700,12 +700,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3407475594365549871, guid: 96d9c317944e04f27842ae18dae46cb8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407475594365549871, guid: 96d9c317944e04f27842ae18dae46cb8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407475594365549871, guid: 96d9c317944e04f27842ae18dae46cb8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.88
       objectReference: {fileID: 0}
     - target: {fileID: 3407475594365549871, guid: 96d9c317944e04f27842ae18dae46cb8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.19
+      value: -3.6
       objectReference: {fileID: 0}
     - target: {fileID: 3407475594365549871, guid: 96d9c317944e04f27842ae18dae46cb8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -991,6 +999,10 @@ PrefabInstance:
     - target: {fileID: 7287571455086663621, guid: f612f79d1461ca248b306245c1be19b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7287571455086663622, guid: f612f79d1461ca248b306245c1be19b4, type: 3}
+      propertyPath: timeToWait
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7287571455086663623, guid: f612f79d1461ca248b306245c1be19b4, type: 3}
       propertyPath: m_Name
