@@ -27,4 +27,9 @@ public class SceneLoader : MonoBehaviour
     public void WaitAndLoadStartScene() {
         StartCoroutine(DelayedLoadScene(1));
     }
+
+    public void LoadNextScene() {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
+    }
 }
