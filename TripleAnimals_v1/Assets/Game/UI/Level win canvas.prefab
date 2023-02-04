@@ -123,8 +123,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: WaitAndLoadNextScene
+        m_TargetAssemblyTypeName: EllipseFadeInAndOut, Assembly-CSharp
+        m_MethodName: TriggerEllipseFadeInAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
