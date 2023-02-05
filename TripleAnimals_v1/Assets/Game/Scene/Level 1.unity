@@ -723,6 +723,22 @@ PrefabInstance:
       value: CardMatrixProducer
       objectReference: {fileID: 0}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: cardPairRange.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: cardPairRange.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: matrixDimension.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: matrixDimension.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: CardPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 2227058255774750118, guid: 256d1851937654444a1dcd6c26b14e8c, type: 3}

@@ -8,6 +8,9 @@ using System.Linq;
 public class CardMatrixProducer : MonoBehaviour
 {
     [SerializeField] Card[] CardPrefabs;
+    [SerializeField] Vector2 cardPairRange;
+    [SerializeField] Vector2 matrixDimension;
+
     int maxlayer;         // It is only the up-boundary, and will never be reached.
     int row, column;
     bool[,,] occupiedIndicator;
@@ -25,8 +28,8 @@ public class CardMatrixProducer : MonoBehaviour
         float cardScalingFactor = CardPrefabs[0].gameObject.transform.localScale[0];
         
         maxlayer = 100;
-        row = 7;
-        column = 5;
+        row = (int)matrixDimension.y;
+        column = (int)matrixDimension.x;
         float shiftInZAxis = 1f;
         System.Random rnd = new System.Random(123);
         ProduceRandCardArrangement();
@@ -79,7 +82,7 @@ public class CardMatrixProducer : MonoBehaviour
         System.Random rnd = new System.Random(100);
         for (int i = 0; i < numberOfType; i++)
         {
-            numberOfPairs.Add(rnd.Next(1, 3));
+            numberOfPairs.Add(rnd.Next((int)cardPairRange.x, (int)cardPairRange.y));
             cardArrangement.AddRange(Enumerable.Repeat(i, 3 * numberOfPairs[i]).ToList());
         }
         

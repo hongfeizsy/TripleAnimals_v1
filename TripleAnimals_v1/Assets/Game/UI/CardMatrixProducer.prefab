@@ -45,8 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardPrefabs:
-  - {fileID: 8621641207543616628, guid: 9f8e2fe8b3681c946acc0dfeb6fe5ad0, type: 3}
-  - {fileID: 6780849847333803075, guid: 1d69dbbffa214cf4881323b01f1b1117, type: 3}
-  - {fileID: 230787757510289244, guid: 131e81e6a86b6cd459ee5f5cfa095a08, type: 3}
-  - {fileID: 6396824443729859966, guid: f1c93acce04c5344aaddc717f40e3d5c, type: 3}
-  - {fileID: 2069058872, guid: 3cd6c4587aed21d4a9b7949074bb5760, type: 3}
+  - {fileID: 2227058255774750118, guid: 256d1851937654444a1dcd6c26b14e8c, type: 3}
+  - {fileID: 8637286640226319166, guid: 22c6f42db3f576845af3db1501cd96ec, type: 3}
+  - {fileID: 8796981171011877140, guid: 6e74f272186b117408b628412967b400, type: 3}
+  - {fileID: 2392958335876390809, guid: b6e91f65b12d373478537b8d465211d7, type: 3}
+  - {fileID: 9187120429304913407, guid: 4d8cdd9657453a145a364396ef62e80c, type: 3}
+  cardPairRange: {x: 1, y: 3}
+  matrixDimension: {x: 5, y: 7}
