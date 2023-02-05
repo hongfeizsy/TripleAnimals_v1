@@ -722,42 +722,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CardMatrixProducer
       objectReference: {fileID: 0}
-    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
-      propertyPath: cardPairRange.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
-      propertyPath: cardPairRange.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
-      propertyPath: matrixDimension.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
-      propertyPath: matrixDimension.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
-      propertyPath: CardPrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 2227058255774750118, guid: 256d1851937654444a1dcd6c26b14e8c, type: 3}
-    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
-      propertyPath: CardPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 8637286640226319166, guid: 22c6f42db3f576845af3db1501cd96ec, type: 3}
-    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
-      propertyPath: CardPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 8796981171011877140, guid: 6e74f272186b117408b628412967b400, type: 3}
-    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
-      propertyPath: CardPrefabs.Array.data[3]
-      value: 
-      objectReference: {fileID: 2392958335876390809, guid: b6e91f65b12d373478537b8d465211d7, type: 3}
-    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
-      propertyPath: CardPrefabs.Array.data[4]
-      value: 
-      objectReference: {fileID: 9187120429304913407, guid: 4d8cdd9657453a145a364396ef62e80c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
 --- !u!1001 &3408001164991831342

@@ -31,8 +31,8 @@ public class CardMatrixProducer : MonoBehaviour
         row = (int)matrixDimension.y;
         column = (int)matrixDimension.x;
         float shiftInZAxis = 1f;
-        System.Random rnd = new System.Random(123);
         ProduceRandCardArrangement();
+        System.Random rnd = new System.Random(123);
         int idx = 0;
         int cardTypeCount = 0;
         int cardTypeIndex = 0;
@@ -70,7 +70,7 @@ public class CardMatrixProducer : MonoBehaviour
             SetCardTouchability();
             FindObjectOfType<CardCountSlider>().InitialCardCount = randCardArrangement.Count;
             // print("How many layers finally? " + (myLayer + 1));
-            // print("How many cards in total? " + randCardArrangement.Count);
+            print("How many cards in total? " + randCardArrangement.Count);
         };
     }
 
@@ -79,7 +79,7 @@ public class CardMatrixProducer : MonoBehaviour
         int numberOfType = CardPrefabs.Count();
         List<int> numberOfPairs = new List<int>();    // 3N cards for each type.
         List<int> cardArrangement = new List<int>();
-        System.Random rnd = new System.Random(100);
+        System.Random rnd = new System.Random();
         for (int i = 0; i < numberOfType; i++)
         {
             numberOfPairs.Add(rnd.Next((int)cardPairRange.x, (int)cardPairRange.y));
