@@ -46,7 +46,7 @@ public class CardMatrixProducer : MonoBehaviour
                 {
                     if (CreateFillingCondition(k, j, i) && rnd.Next(100) <= 50) 
                     {
-                        coordinate = new Vector3((int)(i - column / 2), (int)(j - row / 2) + 3, (int)k);
+                        coordinate = new Vector3((int)(i - column / 2), (int)(j - row / 2) + verticalShift, (int)k);
                         cardTypeIndex = randCardArrangement[cardTypeCount];
                         var cardObject = Instantiate(CardPrefabs[cardTypeIndex], 
                             new Vector3(coordinate.x * (cardWidth / 2) * cardScalingFactor, coordinate.y * (cardHeight / 2) * cardScalingFactor, 
@@ -88,7 +88,7 @@ public class CardMatrixProducer : MonoBehaviour
         }
         
         randCardArrangement = cardArrangement.OrderBy(x => rnd.Next()).ToList();    // Shuffle the cards.
-        // print(string.Format("The random card list: ({0})", string.Join(", ", randCardArrangement)));
+        print(string.Format("The random card list: ({0})", string.Join(", ", randCardArrangement)));
     }
 
     private bool CreateFillingCondition(int layer, int col, int row) 
