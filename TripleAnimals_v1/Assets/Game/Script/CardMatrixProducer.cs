@@ -23,8 +23,8 @@ public class CardMatrixProducer : MonoBehaviour
     void Start()
     {
         Vector3 coordinate = new Vector3();
-        cardWidth = CardPrefabs[0].GetComponent<BoxCollider2D>().size[0];
-        cardHeight = CardPrefabs[0].GetComponent<BoxCollider2D>().size[1];
+        cardWidth = CardPrefabs[0].GetComponent<BoxCollider2D>().size[0] + 0.1f;
+        cardHeight = CardPrefabs[0].GetComponent<BoxCollider2D>().size[1] + 0.1f;
         float cardScalingFactor = CardPrefabs[0].gameObject.transform.localScale[0];
         
         maxlayer = 100;
@@ -43,7 +43,7 @@ public class CardMatrixProducer : MonoBehaviour
             {
                 for (int i = 0; i < column; i++) 
                 {
-                    if (CreateFillingCondition(k, j, i) && rnd.Next(100) <= 70) 
+                    if (CreateFillingCondition(k, j, i) && rnd.Next(100) <= 50) 
                     {
                         coordinate = new Vector3((int)(i - column / 2), (int)(j - row / 2), (int)k);
                         cardTypeIndex = randCardArrangement[cardTypeCount];
@@ -69,7 +69,7 @@ public class CardMatrixProducer : MonoBehaviour
             cardRelation = IdentifyCardRelation(maxlayer);
             SetCardTouchability();
             FindObjectOfType<CardCountSlider>().InitialCardCount = randCardArrangement.Count;
-            // print("How many layers finally? " + (myLayer + 1));
+            print("How many layers finally? " + (myLayer + 1));
             print("How many cards in total? " + randCardArrangement.Count);
         };
     }

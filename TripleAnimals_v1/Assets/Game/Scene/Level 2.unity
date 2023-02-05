@@ -862,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3348130814461427000, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9901595
+      value: -1.36
       objectReference: {fileID: 0}
     - target: {fileID: 3348130814461427000, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: m_LocalPosition.z
@@ -901,25 +901,69 @@ PrefabInstance:
       value: CardMatrixProducer
       objectReference: {fileID: 0}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: cardPairRange.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: cardPairRange.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: matrixDimension.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: matrixDimension.y
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: CardPrefabs.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: CardPrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 8621641207543616628, guid: 9f8e2fe8b3681c946acc0dfeb6fe5ad0, type: 3}
+      objectReference: {fileID: 2227058255774750118, guid: 256d1851937654444a1dcd6c26b14e8c, type: 3}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: CardPrefabs.Array.data[1]
       value: 
-      objectReference: {fileID: 1288274657281414940, guid: 03c5500e849053744887c4e974d4036d, type: 3}
+      objectReference: {fileID: 8637286640226319166, guid: 22c6f42db3f576845af3db1501cd96ec, type: 3}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: CardPrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: 230787757510289244, guid: 131e81e6a86b6cd459ee5f5cfa095a08, type: 3}
+      objectReference: {fileID: 8796981171011877140, guid: 6e74f272186b117408b628412967b400, type: 3}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: CardPrefabs.Array.data[3]
       value: 
-      objectReference: {fileID: 6396824443729859966, guid: f1c93acce04c5344aaddc717f40e3d5c, type: 3}
+      objectReference: {fileID: 2392958335876390809, guid: b6e91f65b12d373478537b8d465211d7, type: 3}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: CardPrefabs.Array.data[4]
       value: 
+      objectReference: {fileID: 1288274657281414940, guid: 03c5500e849053744887c4e974d4036d, type: 3}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: CardPrefabs.Array.data[5]
+      value: 
       objectReference: {fileID: 2069058872, guid: 3cd6c4587aed21d4a9b7949074bb5760, type: 3}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: CardPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 8621641207543616628, guid: 9f8e2fe8b3681c946acc0dfeb6fe5ad0, type: 3}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: CardPrefabs.Array.data[7]
+      value: 
+      objectReference: {fileID: 6064527733270657685, guid: f7e36fb9830a10b448d2d3a69405ac3d, type: 3}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: CardPrefabs.Array.data[8]
+      value: 
+      objectReference: {fileID: 6927905079324273938, guid: 557125b47fe9a7048a094a1ab047d0c7, type: 3}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: CardPrefabs.Array.data[9]
+      value: 
+      objectReference: {fileID: 6396824443729859966, guid: f1c93acce04c5344aaddc717f40e3d5c, type: 3}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: CardPrefabs.Array.data[10]
+      value: 
+      objectReference: {fileID: 230787757510289244, guid: 131e81e6a86b6cd459ee5f5cfa095a08, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
 --- !u!1001 &3408001164991831342

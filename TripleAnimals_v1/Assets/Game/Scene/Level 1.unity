@@ -722,6 +722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CardMatrixProducer
       objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: CardPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1288274657281414940, guid: 03c5500e849053744887c4e974d4036d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
 --- !u!1001 &3408001164991831342
