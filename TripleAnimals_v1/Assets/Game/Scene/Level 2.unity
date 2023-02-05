@@ -342,9 +342,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2457586845925147417, guid: 259f6934d85f3e649a2bf6f4ac1ac74a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457586845925147417, guid: 259f6934d85f3e649a2bf6f4ac1ac74a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457586845925147418, guid: 259f6934d85f3e649a2bf6f4ac1ac74a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ab78a862493ed7f42a9d16bc994e6697, type: 3}
     - target: {fileID: 2457586846197549793, guid: 259f6934d85f3e649a2bf6f4ac1ac74a, type: 3}
       propertyPath: m_Name
       value: EllipseFadeInAndOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457586846197549793, guid: 259f6934d85f3e649a2bf6f4ac1ac74a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2457586846197549794, guid: 259f6934d85f3e649a2bf6f4ac1ac74a, type: 3}
       propertyPath: m_RootOrder
