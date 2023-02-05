@@ -10,6 +10,7 @@ public class CardMatrixProducer : MonoBehaviour
     [SerializeField] Card[] CardPrefabs;
     [SerializeField] Vector2 cardPairRange;
     [SerializeField] Vector2 matrixDimension;
+    [SerializeField] int verticalShift = 3;     // Create some space for cards in rows.
 
     int maxlayer;         // It is only the up-boundary, and will never be reached.
     int row, column;
@@ -45,7 +46,7 @@ public class CardMatrixProducer : MonoBehaviour
                 {
                     if (CreateFillingCondition(k, j, i) && rnd.Next(100) <= 50) 
                     {
-                        coordinate = new Vector3((int)(i - column / 2), (int)(j - row / 2), (int)k);
+                        coordinate = new Vector3((int)(i - column / 2), (int)(j - row / 2) + 3, (int)k);
                         cardTypeIndex = randCardArrangement[cardTypeCount];
                         var cardObject = Instantiate(CardPrefabs[cardTypeIndex], 
                             new Vector3(coordinate.x * (cardWidth / 2) * cardScalingFactor, coordinate.y * (cardHeight / 2) * cardScalingFactor, 
