@@ -11,6 +11,7 @@ public class CardMatrixProducer : MonoBehaviour
     [SerializeField] Vector2 cardPairRange;
     [SerializeField] Vector2 matrixDimension;
     [SerializeField] int verticalShift = 3;     // Create some space for cards in rows.
+    [SerializeField] CardRowProducer rowProducer;
 
     int maxlayer;         // It is only the up-boundary, and will never be reached.
     int row, column;
@@ -33,36 +34,42 @@ public class CardMatrixProducer : MonoBehaviour
         column = (int)matrixDimension.x;
         float shiftInZAxis = 1f;
         ProduceRandCardArrangement();
+
+        // Row producer:
+        rowProducer.SpawnCards(CardPrefabs, randCardArrangement.GetRange(0, rowProducer.NumberOfCards));
+
+
+
         System.Random rnd = new System.Random(123);
         int idx = 0;
         int cardTypeCount = 0;
         int cardTypeIndex = 0;
         int myLayer = 0;
-        for (int k = 0; k < maxlayer; k++) 
-        {
-            for (int j = 0; j < row; j++) 
-            {
-                for (int i = 0; i < column; i++) 
-                {
-                    if (CreateFillingCondition(k, j, i) && rnd.Next(100) <= 50) 
-                    {
-                        coordinate = new Vector3((int)(i - column / 2), (int)(j - row / 2) + verticalShift, (int)k);
-                        cardTypeIndex = randCardArrangement[cardTypeCount];
-                        var cardObject = Instantiate(CardPrefabs[cardTypeIndex], 
-                            new Vector3(coordinate.x * (cardWidth / 2) * cardScalingFactor, coordinate.y * (cardHeight / 2) * cardScalingFactor, 
-                                - (shiftInZAxis * coordinate.z + 1)), Quaternion.identity, gameObject.transform);
-                        CoordidateList.Add(coordinate);
-                        cardObject.Coordidate = coordinate;
-                        cardObject.CardIndex = idx;
-                        idx++;
-                        cardObject.IsTouchable = false;
-                        cardTypeCount++;
-                        if (cardTypeCount >= randCardArrangement.Count) { goto EndStart; }
-                    }
-                }
-            }
-            myLayer++;
-        }
+        // for (int k = 0; k < maxlayer; k++) 
+        // {
+        //     for (int j = 0; j < row; j++) 
+        //     {
+        //         for (int i = 0; i < column; i++) 
+        //         {
+        //             if (CreateFillingCondition(k, j, i) && rnd.Next(100) <= 50) 
+        //             {
+        //                 coordinate = new Vector3((int)(i - column / 2), (int)(j - row / 2) + verticalShift, (int)k);
+        //                 cardTypeIndex = randCardArrangement[cardTypeCount];
+        //                 var cardObject = Instantiate(CardPrefabs[cardTypeIndex], 
+        //                     new Vector3(coordinate.x * (cardWidth / 2) * cardScalingFactor, coordinate.y * (cardHeight / 2) * cardScalingFactor, 
+        //                         - (shiftInZAxis * coordinate.z + 1)), Quaternion.identity, gameObject.transform);
+        //                 CoordidateList.Add(coordinate);
+        //                 cardObject.Coordidate = coordinate;
+        //                 cardObject.CardIndex = idx;
+        //                 idx++;
+        //                 cardObject.IsTouchable = false;
+        //                 cardTypeCount++;
+        //                 if (cardTypeCount >= randCardArrangement.Count) { goto EndStart; }
+        //             }
+        //         }
+        //     }
+        //     myLayer++;
+        // }
 
         EndStart: 
         {

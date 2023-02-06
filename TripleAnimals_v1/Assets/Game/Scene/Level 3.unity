@@ -583,6 +583,51 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2001806065126910911, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
   m_PrefabInstance: {fileID: 1739176612}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1764292718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1764292720}
+  - component: {fileID: 1764292719}
+  m_Layer: 0
+  m_Name: CardRowProducer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1764292719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764292718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca344ac554f0d8d4187098a4f599f7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfCards: 7
+--- !u!4 &1764292720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764292718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.3642902, y: -3.21, z: -2.413909}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1891407373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -904,6 +949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CardMatrixProducer
       objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: rowProducer
+      value: 
+      objectReference: {fileID: 1764292719}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: verticalShift
       value: 2

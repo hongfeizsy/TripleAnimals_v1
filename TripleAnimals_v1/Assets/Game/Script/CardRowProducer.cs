@@ -5,25 +5,30 @@ using UnityEngine;
 public class CardRowProducer : MonoBehaviour
 {
     [SerializeField] int numberOfCards;
-    float shiftInYAxis;
+    float shiftInXAxis;
     float shiftInZAxis;
 
-    private void Start() 
+    private void Awake() 
     {
-        shiftInYAxis = 0.05f;
-        shiftInZAxis = 0.01f;
+        shiftInXAxis = 0.1f;
+        shiftInZAxis = 1f;
     }
 
     public int NumberOfCards 
     {
-        get {return numberOfCards; }
+        get { return numberOfCards; }
         set { numberOfCards = value; }
     }
 
-    private void SpawnCards(Card[] cardPrefabs, List<int> cardIndexes) 
+    public void SpawnCards(Card[] cardPrefabs, List<int> cardIndexes) 
     {
-        foreach (int idx in cardIndexes) {
-            Card cardObject = Instantiate(cardPrefabs[idx], transform.position - new Vector3(0, shiftInYAxis, shiftInZAxis), transform.rotation);
+        int layerNumber = cardIndexes.Count;
+        for (int i = 0; i < layerNumber; i++)
+        {
+            Card cardObject = Instantiate(cardPrefabs[cardIndexes[i]], transform.position - new Vector3(i * shiftInXAxis, 0, i * shiftInZAxis), transform.rotation);
+            cardObject.gameObject.transform.parent = this.transform;
+            if (i == layerNumber - 1) { cardObject.IsTouchable = true; }
+            else { cardObject.IsTouchable = false; }
         }
     }
 }
