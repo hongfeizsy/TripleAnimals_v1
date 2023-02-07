@@ -11,7 +11,7 @@ public class CardMatrixProducer : MonoBehaviour
     [SerializeField] Vector2 cardPairRange;
     [SerializeField] Vector2 matrixDimension;
     [SerializeField] int verticalShift = 3;     // Create some space for cards in rows.
-    [SerializeField] CardRowProducer rowProducer;
+    [SerializeField] List<CardRowProducer> rowProducerList;
 
     int maxlayer;         // It is only the up-boundary, and will never be reached.
     int row, column;
@@ -21,6 +21,7 @@ public class CardMatrixProducer : MonoBehaviour
     List<Vector3> CoordidateList = new List<Vector3>();
     List<List<Vector3>> cardRelation = new List<List<Vector3>>();
     List<int> randCardArrangement = new List<int>();
+    int totalNumberOfCardsFromRowProd;
 
     void Start()
     {
@@ -36,8 +37,13 @@ public class CardMatrixProducer : MonoBehaviour
         ProduceRandCardArrangement();
 
         // Row producer:
-        rowProducer.SpawnCards(CardPrefabs, randCardArrangement.GetRange(0, rowProducer.NumberOfCards));
-        randCardArrangement.RemoveRange(0, rowProducer.NumberOfCards);
+        totalNumberOfCardsFromRowProd = 0;
+        foreach (CardRowProducer rowProducer in rowProducerList)
+        {
+            rowProducer.SpawnCards(CardPrefabs, randCardArrangement.GetRange(totalNumberOfCardsFromRowProd, rowProducer.NumberOfCards));
+            totalNumberOfCardsFromRowProd += rowProducer.NumberOfCards;
+        }
+        randCardArrangement.RemoveRange(0, totalNumberOfCardsFromRowProd);
 
         // Matrix producer:
         System.Random rnd = new System.Random(123);
@@ -61,7 +67,7 @@ public class CardMatrixProducer : MonoBehaviour
                         cardObject.Origin = CardOrigin.Matrix;
                         CoordidateList.Add(coordinate);
                         cardObject.Coordidate = coordinate;
-                        cardObject.CardIndex = idx + rowProducer.NumberOfCards;
+                        cardObject.CardIndex = idx + totalNumberOfCardsFromRowProd;
                         cardIndex.Add(cardObject.CardIndex);
                         idx++;
                         cardObject.IsTouchable = false;
@@ -77,10 +83,10 @@ public class CardMatrixProducer : MonoBehaviour
         {
             cardRelation = IdentifyCardRelation(maxlayer);
             SetCardTouchability();
-            FindObjectOfType<CardCountSlider>().InitialCardCount = randCardArrangement.Count + rowProducer.NumberOfCards;
+            FindObjectOfType<CardCountSlider>().InitialCardCount = randCardArrangement.Count + totalNumberOfCardsFromRowProd;
             print("How many layers finally? " + (myLayer + 1));
-            print("How many cards in total? " + (randCardArrangement.Count + rowProducer.NumberOfCards));
-            print(cardRelation.Count);
+            print("How many cards in total? " + (randCardArrangement.Count + totalNumberOfCardsFromRowProd));
+            print("How many cards produced by Matrix? " + cardRelation.Count);
         };
     }
 
