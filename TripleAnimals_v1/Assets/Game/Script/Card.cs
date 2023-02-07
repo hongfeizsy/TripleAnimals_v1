@@ -10,10 +10,15 @@ public enum CardType
     Null, Fox, Deer, Dear_cub, Bear_black, Bear_brown, Bear_white, BearCub_brown, Elephant, Wolf_brown, Wolf_grey, Monkey, Peacock, Panda, Turkey, Snake_mamba, Snake_cobra
 }
 
+public enum CardOrigin
+{
+    Matrix, Row
+}
+
 public class Card : MonoBehaviour
 {
     [SerializeField] CardType cardType;
-    int cardIndex;
+    int cardIndex;   // Only cards from Row Producer needs a card index?
     CardSpot[] cardSpots;
     bool isInBox = false;
     bool isTouchable = false;
@@ -21,6 +26,7 @@ public class Card : MonoBehaviour
     IEnumerator coroutine;
     Vector3 coordidate;
     CardBox cardBox;
+    CardOrigin cardOrigin;
 
     private void Start() 
     {
@@ -39,9 +45,19 @@ public class Card : MonoBehaviour
         int spotNumberToMove = FindSpotNumber();
         transform.parent = null;
         // spawner.EnableCardInQueue();
-        CardMatrixProducer producer = FindObjectOfType<CardMatrixProducer>();
-        producer.RemoveItemsFromLists(cardIndex, coordidate);
-        producer.SetCardTouchability();
+        
+
+        if (this.Origin == CardOrigin.Matrix) 
+        {
+            CardMatrixProducer producer = FindObjectOfType<CardMatrixProducer>();
+            producer.RemoveItemsFromLists(cardIndex, coordidate);
+            producer.SetCardTouchability();
+        }
+        else 
+        {
+            CardRowProducer producer = FindObjectOfType<CardRowProducer>();
+            producer.EnableCardInQueue();
+        }
 
         if (IsThreeTiles(spotNumberToMove))
         {
@@ -212,4 +228,11 @@ public class Card : MonoBehaviour
         get { return cardIndex; }
         set { cardIndex = value; }
     }
+
+    public CardOrigin Origin
+    {
+        get { return cardOrigin; }
+        set { cardOrigin = value; }
+    }
+
 }

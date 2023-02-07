@@ -17,7 +17,7 @@ public class CardMatrixProducer : MonoBehaviour
     int row, column;
     bool[,,] occupiedIndicator;
     float cardWidth, cardHeight;
-    List<int> cardIndex = new List<int>();
+    List<int> cardIndex = new List<int>();   // This is just for cards from Matrix.
     List<Vector3> CoordidateList = new List<Vector3>();
     List<List<Vector3>> cardRelation = new List<List<Vector3>>();
     List<int> randCardArrangement = new List<int>();
@@ -37,48 +37,50 @@ public class CardMatrixProducer : MonoBehaviour
 
         // Row producer:
         rowProducer.SpawnCards(CardPrefabs, randCardArrangement.GetRange(0, rowProducer.NumberOfCards));
+        randCardArrangement.RemoveRange(0, rowProducer.NumberOfCards);
 
-
-
+        // Matrix producer:
         System.Random rnd = new System.Random(123);
-        int idx = 0;
+        int idx = 0;           // Same as cardTypeCount???
         int cardTypeCount = 0;
         int cardTypeIndex = 0;
         int myLayer = 0;
-        // for (int k = 0; k < maxlayer; k++) 
-        // {
-        //     for (int j = 0; j < row; j++) 
-        //     {
-        //         for (int i = 0; i < column; i++) 
-        //         {
-        //             if (CreateFillingCondition(k, j, i) && rnd.Next(100) <= 50) 
-        //             {
-        //                 coordinate = new Vector3((int)(i - column / 2), (int)(j - row / 2) + verticalShift, (int)k);
-        //                 cardTypeIndex = randCardArrangement[cardTypeCount];
-        //                 var cardObject = Instantiate(CardPrefabs[cardTypeIndex], 
-        //                     new Vector3(coordinate.x * (cardWidth / 2) * cardScalingFactor, coordinate.y * (cardHeight / 2) * cardScalingFactor, 
-        //                         - (shiftInZAxis * coordinate.z + 1)), Quaternion.identity, gameObject.transform);
-        //                 CoordidateList.Add(coordinate);
-        //                 cardObject.Coordidate = coordinate;
-        //                 cardObject.CardIndex = idx;
-        //                 idx++;
-        //                 cardObject.IsTouchable = false;
-        //                 cardTypeCount++;
-        //                 if (cardTypeCount >= randCardArrangement.Count) { goto EndStart; }
-        //             }
-        //         }
-        //     }
-        //     myLayer++;
-        // }
+        for (int k = 0; k < maxlayer; k++) 
+        {
+            for (int j = 0; j < row; j++) 
+            {
+                for (int i = 0; i < column; i++) 
+                {
+                    if (CreateFillingCondition(k, j, i) && rnd.Next(100) <= 50) 
+                    {
+                        coordinate = new Vector3((int)(i - column / 2), (int)(j - row / 2) + verticalShift, (int)k);
+                        cardTypeIndex = randCardArrangement[cardTypeCount];
+                        var cardObject = Instantiate(CardPrefabs[cardTypeIndex], 
+                            new Vector3(coordinate.x * (cardWidth / 2) * cardScalingFactor, coordinate.y * (cardHeight / 2) * cardScalingFactor, 
+                                - (shiftInZAxis * coordinate.z + 1)), Quaternion.identity, gameObject.transform);
+                        cardObject.Origin = CardOrigin.Matrix;
+                        CoordidateList.Add(coordinate);
+                        cardObject.Coordidate = coordinate;
+                        cardObject.CardIndex = idx + rowProducer.NumberOfCards;
+                        cardIndex.Add(cardObject.CardIndex);
+                        idx++;
+                        cardObject.IsTouchable = false;
+                        cardTypeCount++;
+                        if (cardTypeCount >= randCardArrangement.Count) { goto EndStart; }
+                    }
+                }
+            }
+            myLayer++;
+        }
 
         EndStart: 
         {
-            cardIndex = Enumerable.Range(0, CoordidateList.Count).ToList<int>();
             cardRelation = IdentifyCardRelation(maxlayer);
             SetCardTouchability();
-            FindObjectOfType<CardCountSlider>().InitialCardCount = randCardArrangement.Count;
+            FindObjectOfType<CardCountSlider>().InitialCardCount = randCardArrangement.Count + rowProducer.NumberOfCards;
             print("How many layers finally? " + (myLayer + 1));
-            print("How many cards in total? " + randCardArrangement.Count);
+            print("How many cards in total? " + (randCardArrangement.Count + rowProducer.NumberOfCards));
+            print(cardRelation.Count);
         };
     }
 
@@ -154,13 +156,13 @@ public class CardMatrixProducer : MonoBehaviour
 
     public void SetCardTouchability() 
     {
-        // List of CardIndex should always have the same length as List of CardRelation.
+        // List of CardIndex should always have the same length as List of CardRelation. Those are only for cards from Matrix.
         int idx = 0;
 
         Card[] cards = FindObjectsOfType<Card>();
         foreach (Card card in cards) 
         {
-            if (cardIndex.Contains(card.CardIndex)) 
+            if (card.Origin == CardOrigin.Matrix && cardIndex.Contains(card.CardIndex)) 
             {
                 idx = cardIndex.IndexOf(card.CardIndex);
                 if (cardRelation[idx].Count == 0) {
