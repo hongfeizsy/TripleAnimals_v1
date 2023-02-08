@@ -48,7 +48,6 @@ public class CardMatrixProducer : MonoBehaviour
         // Matrix producer:
         System.Random rnd = new System.Random(123);
         int idx = 0;           // Same as cardTypeCount??? Necessary???
-        int cardTypeCount = 0;
         int cardTypeIndex = 0;
         int myLayer = 0;
         for (int k = 0; k < maxlayer; k++) 
@@ -60,7 +59,7 @@ public class CardMatrixProducer : MonoBehaviour
                     if (CreateFillingCondition(k, j, i) && rnd.Next(100) <= 50) 
                     {
                         coordinate = new Vector3((int)(i - column / 2), (int)(j - row / 2) + verticalShift, (int)k);
-                        cardTypeIndex = randCardArrangement[cardTypeCount];
+                        cardTypeIndex = randCardArrangement[idx];
                         var cardObject = Instantiate(CardPrefabs[cardTypeIndex], 
                             new Vector3(coordinate.x * (cardWidth / 2) * cardScalingFactor, coordinate.y * (cardHeight / 2) * cardScalingFactor, 
                                 - (shiftInZAxis * coordinate.z + 1)), Quaternion.identity, gameObject.transform);
@@ -71,8 +70,7 @@ public class CardMatrixProducer : MonoBehaviour
                         cardIndex.Add(cardObject.CardIndex);
                         idx++;
                         cardObject.IsTouchable = false;
-                        cardTypeCount++;
-                        if (cardTypeCount >= randCardArrangement.Count) { goto EndStart; }
+                        if (idx >= randCardArrangement.Count) { goto EndStart; }
                     }
                 }
             }

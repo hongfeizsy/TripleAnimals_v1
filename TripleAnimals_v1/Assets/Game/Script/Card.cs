@@ -32,7 +32,6 @@ public class Card : MonoBehaviour
     private void Start() 
     {
         cardSpots = FindObjectsOfType<CardSpot>();
-        // spawner = transform.parent.GetComponent<CardSpawner>();
         cardBox = FindObjectOfType<CardBox>();
         ownProducer = transform.parent;
     }
@@ -46,9 +45,7 @@ public class Card : MonoBehaviour
         transform.GetChild(0).gameObject.GetComponent<Animator>().SetTrigger("Eat");
         int spotNumberToMove = FindSpotNumber();
         transform.parent = null;
-        // spawner.EnableCardInQueue();
         
-
         if (this.Origin == CardOrigin.Matrix) 
         {
             CardMatrixProducer producer = ownProducer.GetComponent<CardMatrixProducer>();
