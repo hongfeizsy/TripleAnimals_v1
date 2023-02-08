@@ -27,12 +27,14 @@ public class Card : MonoBehaviour
     Vector3 coordidate;
     CardBox cardBox;
     CardOrigin cardOrigin;
+    Transform ownProducer;
 
     private void Start() 
     {
         cardSpots = FindObjectsOfType<CardSpot>();
         // spawner = transform.parent.GetComponent<CardSpawner>();
         cardBox = FindObjectOfType<CardBox>();
+        ownProducer = transform.parent;
     }
 
     private void OnMouseDown()
@@ -49,13 +51,13 @@ public class Card : MonoBehaviour
 
         if (this.Origin == CardOrigin.Matrix) 
         {
-            CardMatrixProducer producer = FindObjectOfType<CardMatrixProducer>();
+            CardMatrixProducer producer = ownProducer.GetComponent<CardMatrixProducer>();
             producer.RemoveItemsFromLists(cardIndex, coordidate);
             producer.SetCardTouchability();
         }
         else 
         {
-            CardRowProducer producer = FindObjectOfType<CardRowProducer>();
+            CardRowProducer producer = ownProducer.GetComponent<CardRowProducer>();
             producer.EnableCardInQueue();
         }
 
