@@ -47,7 +47,7 @@ public class CardMatrixProducer : MonoBehaviour
 
         // Matrix producer:
         System.Random rnd = new System.Random(123);
-        int idx = 0;           // Same as cardTypeCount???
+        int idx = 0;           // Same as cardTypeCount??? Necessary???
         int cardTypeCount = 0;
         int cardTypeIndex = 0;
         int myLayer = 0;
