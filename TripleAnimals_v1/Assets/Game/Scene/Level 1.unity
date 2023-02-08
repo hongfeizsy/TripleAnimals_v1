@@ -191,6 +191,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328970238d2468041bff389a2b42d03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &428150470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 428150472}
+  - component: {fileID: 428150471}
+  m_Layer: 0
+  m_Name: PlayTimeSearcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &428150471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428150470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49cb099dd3526e64c97140923a551306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &428150472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428150470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &733771154
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +523,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: WaitAndLoadStartScene
       objectReference: {fileID: 0}
+    - target: {fileID: 956470327, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 428150471}
+    - target: {fileID: 956470327, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerPlayTimeIncreaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 956470327, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayTimeSearcher, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2001806065126910899, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
       propertyPath: m_Name
       value: Level lose canvas
@@ -680,7 +736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8314844095518505942, guid: a49a37935b124cd42926c4d8672146b2, type: 3}
       propertyPath: m_Text
-      value: Level 3
+      value: Level 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49a37935b124cd42926c4d8672146b2, type: 3}
@@ -903,6 +959,22 @@ PrefabInstance:
     - target: {fileID: 3348130814461427002, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: m_Name
       value: CardMatrixProducer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: cardPairRange.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: matrixDimension.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: matrixDimension.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: CardPrefabs.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: rowProducerList.Array.size

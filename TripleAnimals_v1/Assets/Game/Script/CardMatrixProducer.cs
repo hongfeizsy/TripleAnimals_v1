@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Linq;
-
+using UnityEngine.SceneManagement;
 
 public class CardMatrixProducer : MonoBehaviour
 {
@@ -22,11 +22,9 @@ public class CardMatrixProducer : MonoBehaviour
     List<List<Vector3>> cardRelation = new List<List<Vector3>>();
     List<int> randCardArrangement = new List<int>();
     int totalNumberOfCardsFromRowProd;
-    int playTime;
 
     void Start()
     {
-        playTime = 0;
         cardWidth = CardPrefabs[0].GetComponent<BoxCollider2D>().size[0] + 0.1f;
         cardHeight = CardPrefabs[0].GetComponent<BoxCollider2D>().size[1] + 0.1f;
         
@@ -127,15 +125,6 @@ public class CardMatrixProducer : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void PlayAgain()
-    {
-        if (playTime >= 1) return;
-        playTime++;
-
-        ProduceAllCards();
-
     }
 
     private void ProduceAllCards() 

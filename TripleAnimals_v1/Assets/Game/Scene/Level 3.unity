@@ -259,6 +259,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328970238d2468041bff389a2b42d03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &371289567 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+  m_PrefabInstance: {fileID: 3348130814197222810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796cdba040a0a954aa85e3977d9f1888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &733771154
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,10 +554,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 96994838}
-    - target: {fileID: 390707537, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: WaitAndLoadStartScene
-      objectReference: {fileID: 0}
+    - target: {fileID: 956470327, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 371289567}
     - target: {fileID: 2001806065126910899, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
       propertyPath: m_Name
       value: Level lose canvas
@@ -855,7 +866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2457586846197549793, guid: 259f6934d85f3e649a2bf6f4ac1ac74a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2457586846197549794, guid: 259f6934d85f3e649a2bf6f4ac1ac74a, type: 3}
       propertyPath: m_RootOrder
@@ -984,6 +995,10 @@ PrefabInstance:
       value: CardMatrixProducer
       objectReference: {fileID: 0}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: loseMessage
+      value: 
+      objectReference: {fileID: 1739176613}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: rowProducerList.Array.data[0]
       value: 
       objectReference: {fileID: 1764292719}
@@ -1106,41 +1121,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 733771158}
     m_Modifications:
     - target: {fileID: 587003398, guid: 8656ca773e2fdf54a96ac4d1d3e78183, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 587003398, guid: 8656ca773e2fdf54a96ac4d1d3e78183, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2110384470}
-    - target: {fileID: 587003398, guid: 8656ca773e2fdf54a96ac4d1d3e78183, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TriggerEllipseFadeInAnimation
-      objectReference: {fileID: 0}
-    - target: {fileID: 587003398, guid: 8656ca773e2fdf54a96ac4d1d3e78183, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: EllipseFadeInAndOut, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 587003398, guid: 8656ca773e2fdf54a96ac4d1d3e78183, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7119705033270987283, guid: 8656ca773e2fdf54a96ac4d1d3e78183, type: 3}
-      propertyPath: m_Color.b
-      value: 0.5745233
-      objectReference: {fileID: 0}
-    - target: {fileID: 7119705033270987283, guid: 8656ca773e2fdf54a96ac4d1d3e78183, type: 3}
-      propertyPath: m_Color.g
-      value: 0.9622642
-      objectReference: {fileID: 0}
-    - target: {fileID: 7119705033270987283, guid: 8656ca773e2fdf54a96ac4d1d3e78183, type: 3}
-      propertyPath: m_Color.r
-      value: 0.48567107
-      objectReference: {fileID: 0}
-    - target: {fileID: 7119705034302393753, guid: 8656ca773e2fdf54a96ac4d1d3e78183, type: 3}
-      propertyPath: m_text
-      value: Level win
-      objectReference: {fileID: 0}
     - target: {fileID: 7119705034998304277, guid: 8656ca773e2fdf54a96ac4d1d3e78183, type: 3}
       propertyPath: m_Name
       value: Level win canvas
