@@ -510,6 +510,10 @@ PrefabInstance:
       value: PlayTimeSearcher
       objectReference: {fileID: 0}
     - target: {fileID: 5610001091080518559, guid: ce625f1721053d441b1ad55564e45183, type: 3}
+      propertyPath: noChanceMessage
+      value: 
+      objectReference: {fileID: 1129553728}
+    - target: {fileID: 5610001091080518559, guid: ce625f1721053d441b1ad55564e45183, type: 3}
       propertyPath: oneChanceMessage
       value: 
       objectReference: {fileID: 1421083719}
@@ -526,6 +530,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49cb099dd3526e64c97140923a551306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1129553728 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1129553728, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
+  m_PrefabInstance: {fileID: 1739176612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1421083719 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1421083719, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
@@ -928,7 +937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2457586846197549793, guid: 259f6934d85f3e649a2bf6f4ac1ac74a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2457586846197549794, guid: 259f6934d85f3e649a2bf6f4ac1ac74a, type: 3}
       propertyPath: m_RootOrder

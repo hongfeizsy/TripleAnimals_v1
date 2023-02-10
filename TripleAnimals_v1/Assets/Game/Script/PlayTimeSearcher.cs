@@ -5,15 +5,16 @@ using UnityEngine;
 public class PlayTimeSearcher : MonoBehaviour
 {
     [SerializeField] GameObject oneChanceMessage;
+    [SerializeField] GameObject noChanceMessage;
 
-    public void TriggerPlayTimeIncreaser()
-    {
-        GameObject gmObj = GameObject.Find("PlayTimeIdentifier");
-        // gmObj.GetComponent<PlayTimeIdentifier>().IncreasePlayTime();
-        if (gmObj.GetComponent<PlayTimeIdentifier>().PlayTime < 1) {
-            gmObj.GetComponent<PlayTimeIdentifier>().IncreasePlayTime();
-        }
-    }
+    // public void TriggerPlayTimeIncreaser()
+    // {
+    //     GameObject gmObj = GameObject.Find("PlayTimeIdentifier");
+    //     // gmObj.GetComponent<PlayTimeIdentifier>().IncreasePlayTime();
+    //     if (gmObj.GetComponent<PlayTimeIdentifier>().PlayTime < 1) {
+    //         gmObj.GetComponent<PlayTimeIdentifier>().IncreasePlayTime();
+    //     }
+    // }
 
     public void LoadOneChanceMessage()
     {
@@ -24,5 +25,17 @@ public class PlayTimeSearcher : MonoBehaviour
             SceneLoader loader = FindObjectOfType<SceneLoader>();
             loader.WaitAndLoadCurrentScene();
         }
+        else 
+        {
+            noChanceMessage.SetActive(true);
+            // StartCoroutine(WaitAndKillNoChanceWin());
+        }
     }
+
+    // private IEnumerator WaitAndKillNoChanceWin()
+    // {
+    //     noChanceMessage.SetActive(true);
+    //     yield return new WaitForSeconds(1f);
+    //     noChanceMessage.SetActive(false);
+    // }
 }
