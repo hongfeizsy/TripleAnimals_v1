@@ -133,7 +133,7 @@ public class CardMatrixProducer : MonoBehaviour
         float cardScalingFactor = CardPrefabs[0].gameObject.transform.localScale[0];
         maxlayer = 100;
         float shiftInZAxis = 1f;
-        ProduceRandCardArrangement();
+        // ProduceRandCardArrangement();
 
         // Row producer:
         totalNumberOfCardsFromRowProd = 0;
