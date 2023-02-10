@@ -20,6 +20,7 @@ public class PlayTimeSearcher : MonoBehaviour
         GameObject gmObj = GameObject.Find("PlayTimeIdentifier");
         if (gmObj.GetComponent<PlayTimeIdentifier>().PlayTime < 1) {
             oneChanceMessage.SetActive(true);
+            gmObj.GetComponent<PlayTimeIdentifier>().IncreasePlayTime();
             SceneLoader loader = FindObjectOfType<SceneLoader>();
             loader.WaitAndLoadCurrentScene();
         }

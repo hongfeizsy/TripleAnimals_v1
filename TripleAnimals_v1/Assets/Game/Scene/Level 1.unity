@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49cb099dd3526e64c97140923a551306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oneChanceMessage: {fileID: 0}
 --- !u!4 &428150472
 Transform:
   m_ObjectHideFlags: 0
@@ -549,7 +550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2001806065126910899, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2001806065126910911, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
       propertyPath: m_Pivot.x
