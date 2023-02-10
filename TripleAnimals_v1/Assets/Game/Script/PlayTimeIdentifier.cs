@@ -10,7 +10,6 @@ public class PlayTimeIdentifier : MonoBehaviour
     void Start()
     {
         playTime = 0;
-        print(FindObjectsOfType(GetType()).Length);
         if (FindObjectsOfType(GetType()).Length > 1) 
         {
             foreach (PlayTimeIdentifier identifier in FindObjectsOfType(typeof(PlayTimeIdentifier)))
@@ -26,9 +25,16 @@ public class PlayTimeIdentifier : MonoBehaviour
 
     public void IncreasePlayTime() 
     {
-        if (playTime == 0) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            playTime++;
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        playTime++;
+        // if (playTime == 0) {
+        //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //     playTime++;
+        // }
+    }
+
+    public int PlayTime {
+        get { return playTime; }
+        set { playTime = value; }
     }
 }

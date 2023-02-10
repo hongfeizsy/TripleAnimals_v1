@@ -32,4 +32,16 @@ public class SceneLoader : MonoBehaviour
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
+
+    public void WaitAndLoadCurrentScene()
+    {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(DelayLoadCurrentScene());
+    }
+
+    private IEnumerator DelayLoadCurrentScene() {
+        yield return new WaitForSeconds(1f);
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
 }
