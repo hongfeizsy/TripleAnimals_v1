@@ -12,13 +12,14 @@ public class PlayTimeIdentifier : MonoBehaviour
         playTime = 0;
         print(FindObjectsOfType(GetType()).Length);
         if (FindObjectsOfType(GetType()).Length > 1) 
-        { 
-            foreach (GameObject identifier in FindObjectsOfType(GetType())) 
+        {
+            foreach (PlayTimeIdentifier identifier in FindObjectsOfType(typeof(PlayTimeIdentifier)))
             {
-                if (identifier.GetComponent<PlayTimeIdentifier>().playTime > 0) {
-                    Destroy(identifier);
+                if (identifier.playTime > 0) {
+                    identifier.playTime = 0;
                 }
             } 
+            Destroy(gameObject);
         }
         else { DontDestroyOnLoad(gameObject); }
     }
