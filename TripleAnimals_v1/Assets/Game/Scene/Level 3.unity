@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5564268218723254048, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
+      propertyPath: direction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5564268218723254049, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
       propertyPath: m_Name
       value: CardRowProducer (1)

@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5564268218723254048, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
+      propertyPath: direction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5564268218723254049, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
       propertyPath: m_Name
       value: CardRowProducer (1)
@@ -865,7 +869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8314844095518505942, guid: a49a37935b124cd42926c4d8672146b2, type: 3}
       propertyPath: m_Text
-      value: Level 3
+      value: Level 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49a37935b124cd42926c4d8672146b2, type: 3}
