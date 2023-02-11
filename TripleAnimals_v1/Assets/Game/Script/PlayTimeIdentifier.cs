@@ -25,12 +25,7 @@ public class PlayTimeIdentifier : MonoBehaviour
 
     public void IncreasePlayTime() 
     {
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         playTime++;
-        // if (playTime == 0) {
-        //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //     playTime++;
-        // }
     }
 
     public int PlayTime {

@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49cb099dd3526e64c97140923a551306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oneChanceMessage: {fileID: 0}
+  noChanceMessage: {fileID: 0}

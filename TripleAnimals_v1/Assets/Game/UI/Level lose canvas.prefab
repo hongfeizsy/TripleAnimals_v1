@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 1129553730}
   - component: {fileID: 1129553734}
   m_Layer: 5
-  m_Name: NoChange canvas
+  m_Name: NoChance canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 1421083721}
   - component: {fileID: 1421083724}
   m_Layer: 5
-  m_Name: OneChange canvas
+  m_Name: OneChance canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
