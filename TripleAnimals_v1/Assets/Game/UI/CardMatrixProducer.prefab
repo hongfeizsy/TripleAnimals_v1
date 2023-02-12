@@ -60,8 +60,9 @@ MonoBehaviour:
   - {fileID: 8796981171011877140, guid: 6e74f272186b117408b628412967b400, type: 3}
   - {fileID: 2392958335876390809, guid: b6e91f65b12d373478537b8d465211d7, type: 3}
   - {fileID: 9187120429304913407, guid: 4d8cdd9657453a145a364396ef62e80c, type: 3}
+  - {fileID: 6780849847333803075, guid: 1d69dbbffa214cf4881323b01f1b1117, type: 3}
   cardPairRange: {x: 1, y: 3}
-  matrixDimension: {x: 10, y: 18}
+  matrixDimension: {x: 7, y: 9}
   verticalShift: 2
   rowProducerList:
   - {fileID: 0}
