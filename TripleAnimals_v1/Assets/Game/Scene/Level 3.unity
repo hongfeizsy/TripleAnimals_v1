@@ -631,6 +631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level lose canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2001806065126910899, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2001806065126910911, guid: 2678b2963b544a34d86dfcaf289f3bb8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1202,10 +1206,6 @@ PrefabInstance:
     - target: {fileID: 7119705034998304277, guid: 8656ca773e2fdf54a96ac4d1d3e78183, type: 3}
       propertyPath: m_Name
       value: Level win canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7119705034998304277, guid: 8656ca773e2fdf54a96ac4d1d3e78183, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7119705034998304281, guid: 8656ca773e2fdf54a96ac4d1d3e78183, type: 3}
       propertyPath: m_Pivot.x
