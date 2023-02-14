@@ -47,7 +47,7 @@ public class CardBox : MonoBehaviour
     private IEnumerator MoveCardsToLeft() 
     {
         shouldMoveCardsToLeft = false;
-        yield return new WaitForSeconds(0.5f);    // Should be kept for particle effect?
+        yield return new WaitForSeconds(0.3f);    // Should be kept for particle effect?
 
         List<int> occupiedSpotNumbers = new List<int>();
         List<int> emptySpotNumbers = new List<int>();

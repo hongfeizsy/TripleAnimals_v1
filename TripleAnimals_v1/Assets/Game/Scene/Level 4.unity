@@ -132,7 +132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5564268218723254048, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
       propertyPath: direction
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5564268218723254048, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
+      propertyPath: numberOfCards
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5564268218723254049, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
       propertyPath: m_Name
@@ -144,11 +148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5564268218723254079, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.16
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 5564268218723254079, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.21
+      value: -3.1
       objectReference: {fileID: 0}
     - target: {fileID: 5564268218723254079, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -451,7 +455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877121469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1083,6 +1087,14 @@ PrefabInstance:
       value: CardMatrixProducer
       objectReference: {fileID: 0}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: matrixDimension.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
+      propertyPath: matrixDimension.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: rowProducerList.Array.data[0]
       value: 
       objectReference: {fileID: 1764292719}
@@ -1486,6 +1498,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5564268218723254048, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
+      propertyPath: direction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5564268218723254048, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
+      propertyPath: numberOfCards
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5564268218723254049, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
       propertyPath: m_Name
       value: CardRowProducer
@@ -1496,11 +1516,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5564268218723254079, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.06
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 5564268218723254079, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.21
+      value: -2.1
       objectReference: {fileID: 0}
     - target: {fileID: 5564268218723254079, guid: af32d126928c3e541bb363d40cd1d1ad, type: 3}
       propertyPath: m_LocalPosition.z
