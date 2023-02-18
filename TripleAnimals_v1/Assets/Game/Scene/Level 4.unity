@@ -1088,11 +1088,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: matrixDimension.x
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: matrixDimension.y
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: rowProducerList.Array.data[0]

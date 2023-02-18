@@ -1144,11 +1144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: matrixDimension.x
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: matrixDimension.y
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3348130814461427003, guid: bc845e5657919fa459cea32443b1fd03, type: 3}
       propertyPath: rowProducerList.Array.data[0]
