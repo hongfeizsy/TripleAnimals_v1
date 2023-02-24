@@ -10,6 +10,7 @@ public class CardBox : MonoBehaviour
     [SerializeField] UnityEvent killThreeTilesSound;
     CardSpot[] cardSpots;
     bool shouldMoveCardsToLeft;   // Should the remaining cards in the box move left?
+    bool isBusy;
     float timeElapsed = 0f;
     bool gameContinue = true;
 
@@ -17,6 +18,7 @@ public class CardBox : MonoBehaviour
     {
         cardSpots = FindObjectsOfType<CardSpot>();
         shouldMoveCardsToLeft = false;
+        isBusy = false;
     }
 
     void Update()
@@ -47,7 +49,10 @@ public class CardBox : MonoBehaviour
     private IEnumerator MoveCardsToLeft() 
     {
         shouldMoveCardsToLeft = false;
-        yield return new WaitForSeconds(0.3f);    // Should be kept for particle effect?
+
+        // Kept for particle effect; 
+        // Actually the bug is here: click two cards continuously within [0.15s, 0.45s], then overlapping of cards will be observed.
+        yield return new WaitForSeconds(0.3f);    
 
         List<int> occupiedSpotNumbers = new List<int>();
         List<int> emptySpotNumbers = new List<int>();
@@ -111,5 +116,20 @@ public class CardBox : MonoBehaviour
 
     public void PlayKillingSound() {
         killThreeTilesSound.Invoke();
+    }
+
+    public bool IsBusy {
+        get { return isBusy; }
+        set { isBusy = value; }
+    }
+
+    public void KeepBoxBusyForSeconds(float busyTime) 
+    {
+        StartCoroutine(WaitAndFreeCardBox(busyTime));
+    }
+
+    private IEnumerator WaitAndFreeCardBox(float busyTime) {
+        yield return new WaitForSeconds(busyTime);
+        isBusy = false;
     }
 }

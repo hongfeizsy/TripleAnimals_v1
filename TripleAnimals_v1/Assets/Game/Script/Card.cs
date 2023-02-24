@@ -38,10 +38,12 @@ public class Card : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (cardBox.IsBusy) { return; }
         if (!cardBox.GameContinue) { return; }
         if (isInBox) { return; }
 
         isInBox = true;
+        cardBox.IsBusy = true;
         transform.GetChild(0).gameObject.GetComponent<Animator>().SetTrigger("Eat");
         int spotNumberToMove = FindSpotNumber();
         transform.parent = null;
@@ -63,8 +65,12 @@ public class Card : MonoBehaviour
             float waitTimeToKill = 0.15f;  // The time used for a card from producer to card spot.
             MoveToSpot(spotNumberToMove);
             StartCoroutine(WaitAndKillThreeTiles(waitTimeToKill, spotNumberToMove));
+            cardBox.KeepBoxBusyForSeconds(0.47f);  // 0.45 = 0.15 + 0.30
         }
-        else { MoveToSpot(spotNumberToMove); }
+        else { 
+            MoveToSpot(spotNumberToMove); 
+            cardBox.KeepBoxBusyForSeconds(0.15f);
+        }
         
     }
 
@@ -233,5 +239,4 @@ public class Card : MonoBehaviour
         get { return cardOrigin; }
         set { cardOrigin = value; }
     }
-
 }
