@@ -65,11 +65,11 @@ public class Card : MonoBehaviour
             float waitTimeToKill = 0.15f;  // The time used for a card from producer to card spot.
             MoveToSpot(spotNumberToMove);
             StartCoroutine(WaitAndKillThreeTiles(waitTimeToKill, spotNumberToMove));
-            cardBox.KeepBoxBusyForSeconds(0.47f);  // 0.45 = 0.15 + 0.30
+            cardBox.KeepBoxBusyForSeconds(0.50f);  // 0.45 = 0.15 + 0.30
         }
         else { 
             MoveToSpot(spotNumberToMove); 
-            cardBox.KeepBoxBusyForSeconds(0.15f);
+            cardBox.KeepBoxBusyForSeconds(0.20f);
         }
         
     }
